@@ -1,6 +1,7 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+    white-space: nowrap;
     
 }
 
@@ -14,7 +15,7 @@ a, a:hover, a:focus, a:active {
     justify-content: space-around;
     margin: 16px;
     margin-top: 24px;
-   
+    white-space: nowrap;
 }
 
 .header-text{
@@ -32,12 +33,28 @@ a, a:hover, a:focus, a:active {
 .container {
     margin: 16px;
     margin-top: 32px;
-    /* margin-left: 32px; */
     display: flex;
     height: 500px;
     justify-content: space-between;
     align-items: center;
-    
+
+}
+
+.container a:link {
+    text-decoration: underline;
+}
+
+.container a:hover {
+    background-color: #c0d2cc;
+}
+
+
+.container .text{
+    margin-right: 10px;
+}
+
+.container .image{
+    overflow: hidden ;
 }
 
 
@@ -45,10 +62,10 @@ a, a:hover, a:focus, a:active {
     display: flex;
     background-color: lightgrey;
     border-radius: 15px;
-    margin: 128px;
+    margin: 128px auto;
     height: 100px;
-    justify-content: center;
-    align-items: center;
-    
+    justify-content: center; /*centers content on main axis*/
+    align-items: center; /*centers content on cross axis*/
+
 }
 

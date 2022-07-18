@@ -94,6 +94,9 @@ a, a:hover, a:focus, a:active {
     border-radius: 15px;
     margin: 128px auto; 
     height: 100px;
+    width:fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content: center; /*centers content on main axis*/
     align-items: center; /*centers content on cross axis*/
     align-self: center;

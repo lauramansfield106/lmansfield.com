@@ -2,6 +2,8 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     white-space: nowrap;
+    margin: auto;
+   
     
 }
 
@@ -12,10 +14,14 @@ a, a:hover, a:focus, a:active {
 
 .header {
     display: flex;
-    justify-content: space-around;
-    margin: 16px;
-    margin-top: 24px;
-    white-space: nowrap;
+    /* justify-content: space-around; */
+    /* margin: auto; */
+    /* width: 100%; */
+    /* white-space: nowrap; */
+    /* background: #d2c0c7; */
+    /* padding-left: 6px;
+    padding-right: 6px; */
+    padding: 10px;
 }
 
 .header-text{
@@ -23,20 +29,26 @@ a, a:hover, a:focus, a:active {
     flex-grow: 20;
     font-weight: bolder;
     font-size: larger;
+
 }
 
 .header-link{
     text-align: right;
     flex-grow: 1;
-   }
+    justify-content: center;
+    align-self: center;
+}
 
 .container {
-    margin: 16px;
-    margin-top: 32px;
+    /* margin: 16px;
+    margin-top: 32px; */
     display: flex;
-    height: 500px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    /* width: 100%; */
+    padding-top: 10px;
+    /* margin: auto; */
 
 }
 
@@ -50,22 +62,42 @@ a, a:hover, a:focus, a:active {
 
 
 .container .text{
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1;
 }
 
 .container .image{
     overflow: hidden ;
+    margin: 0;
+
 }
 
+/* .quote {
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+    background: #c0d2cc; 
+    height: 100px;
+    white-space: normal;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px lightgrey;
+} */
 
 .contact {
     display: flex;
     background-color: lightgrey;
     border-radius: 15px;
-    margin: 128px auto;
+    margin: 128px auto; 
     height: 100px;
     justify-content: center; /*centers content on main axis*/
     align-items: center; /*centers content on cross axis*/
-
+    align-self: center;
 }
+
+
 

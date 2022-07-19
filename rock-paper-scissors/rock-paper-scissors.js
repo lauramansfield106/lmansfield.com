@@ -3,7 +3,8 @@
 //variables
 let playerChoice;
 let computerChoice;
-let playerSelected;
+let roundWinner;
+
 
 //get body element
 const body = document.querySelector("body");
@@ -13,19 +14,21 @@ const buttons = document.querySelectorAll("button");
 const playerChoiceText = document.querySelector(".playerChoice");
 //get computerChoice element to show player 
 const computerChoiceText = document.querySelector(".computerChoice");
+//get winner announcment to show player
+const winnerText = document.querySelector(".winnerBanner");
 
 //@param string playerChoice
 //sets text of playerChoiceTest accordingly
 function getPlayerChoiceText(playerChoice){
     switch(playerChoice){
         case "rock":
-            playerChoiceText.textContent = "You chose rock!";
+            playerChoiceText.textContent = "You chose rock.";
             break;
         case "paper":
-            playerChoiceText.textContent = "You chose paper!";
+            playerChoiceText.textContent = "You chose paper.";
             break
         case "scissors":
-            playerChoiceText.textContent = "You chose scissors!";
+            playerChoiceText.textContent = "You chose scissors.";
             break;
     }
 }
@@ -33,13 +36,13 @@ function getPlayerChoiceText(playerChoice){
 function getComputerChoiceText(computerChoice){
     switch(computerChoice){
         case "rock":
-            computerChoiceText.textContent = "The computer chose rock!";
+            computerChoiceText.textContent = "The computer chose rock.";
             break;
         case "paper":
-            computerChoiceText.textContent = "The computer chose paper!";
+            computerChoiceText.textContent = "The computer chose paper.";
             break
         case "scissors":
-            computerChoiceText.textContent = "The computer chose scissors!";
+            computerChoiceText.textContent = "The computer chose scissors.";
             break;
     }
 }
@@ -49,19 +52,42 @@ function getComputerChoice(){
     computerChoice = buttons[choice].id;
 }
 
+function getRoundWinner(playerChoice, computerChoice){
+    if(playerChoice===computerChoice){
+        //tie
+        winnerText.textContent = "There is a tie!";
+    }
+    else if(
+        (playerChoice=="rock") && (computerChoice=="scissors") ||
+        (playerChoice=="paper") && (computerChoice=="rock") ||
+        (playerChoice=="scissors") && (computerChoice=="paper")
+    ){
+        //player wins
+        winnerText.textContent = "You won!";
+    }
+    else{
+        //computer wins
+        winnerText.textContent = "You lost!";
+    }
+}
 
-//when rock/paper/scissors button is clicked, save players choice,
-//gets computers choice, and prints output for user.
-
+//when rock/paper/scissors button is clicked, save player's choice,
+//get computer's choice, winnder of the round, and print info
+//to player
 function getRound(){
-    playerSelected = false;
     buttons.forEach( (button) => {
             button.addEventListener('click', (event) => {
+
                     playerChoice = button.id;
                     getPlayerChoiceText(playerChoice);
+
                     var choice = Math.floor(Math.random()*3);
+
                     computerChoice = buttons[choice].id;
                     getComputerChoiceText(computerChoice);
+                    console.log(playerChoice, computerChoice);
+                    getRoundWinner(playerChoice, computerChoice);
+
                 }
             )
         }   
@@ -70,11 +96,7 @@ function getRound(){
 
 
 
-
 body.addEventListener('click', getRound());
-
-//getComputerChoice();
-// getComputerChoiceText(computerChoice);
 
 
 

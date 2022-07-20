@@ -12,7 +12,7 @@
         <title>Laura Mansfield</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="styles.css">
       
         <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
@@ -31,15 +31,29 @@
         </div>
        
         <script src="rock-paper-scissors.js" async defer></script>
-        <div>Play Rock, Paper, Scissors. Best of 5!</div>
-        <button id="rock">rock</button>
-        <button id="paper">paper</button>
-        <button id="scissors">scissors</button>
-        
-        <div class="playerChoice">Choose your weapon!</div>
-        <div class="computerChoice">The computer chose...</div>
-        <div class="roundWinner"> </div>
-        <div class="playerWinCount"></div>
-        <div class="computerWinCount"></div>
-        <div class="final"></div>
+        <div class="main-container">
+
+            <div class="game-title">Play Rock, Paper, Scissors. Best of 5!</div>
+            <div class="playerChoice">Choose your weapon!</div>
+            <div class="computerChoice">The computer chose...</div>
+           
+            <div class="button-container">
+                <button id="rock">rock</button>
+                <button id="paper">paper</button>
+                <button id="scissors">scissors</button>
+            </div>
+            <div class="winCounts">
+                <div>Your Score</div>
+                <div>Computer Score</div>
+             </div>
+            
+            <div class="winCounts">
+                <div class="playerWinCount"></div>
+                <div class="computerWinCount"></div>
+            </div>
+            
+            <div class="roundWinner"> </div>
+            <div class="final"></div>
+            
+        </div>
     </body>

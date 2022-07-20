@@ -75,12 +75,12 @@ function getRoundWinner(playerChoice, computerChoice){
         (playerChoice=="scissors") && (computerChoice=="paper")
     ){
         //player wins
-        winnerText.textContent = "You won!";
+        winnerText.textContent = "You won this round!";
         return 1;
     }
     else{
         //computer wins
-        winnerText.textContent = "You lost!";
+        winnerText.textContent = "You lost this round!";
         return 2;
     }
 }

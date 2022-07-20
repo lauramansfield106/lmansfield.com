@@ -6,14 +6,14 @@ let computerChoice;
 let roundWinner;
 let playerWinCount=0;
 let computerWinCount=0;
-let roundCount=0;
-
+let roundCount=1;
+let playAgain=false;
 
 
 //get body element
 const body = document.querySelector("body");
 //get rock,paper,scissor buttons as an array
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("button.weapon");
 //get playerChoice element to show player which weapon they chose
 const playerChoiceText = document.querySelector(".playerChoice");
 //get computerChoice element to show player 
@@ -27,6 +27,12 @@ const computerWinCountText = document.querySelector(".computerWinCount")
 
 //final score
 const finalScoreText = document.querySelector(".final");
+
+//final results
+const finalResultsText = document.querySelector(".finalResults");
+
+//play again button
+const playAgainText = document.querySelector("button.playAgain");
 
 //@param string playerChoice
 //sets text of playerChoiceTest accordingly
@@ -66,7 +72,7 @@ function getComputerChoice(){
 function getRoundWinner(playerChoice, computerChoice){
     if(playerChoice===computerChoice){
         //tie
-        winnerText.textContent = "There is a tie!";
+        winnerText.textContent = "Round " + roundCount + ": Tie!";
         return 0;
     }
     else if(
@@ -75,14 +81,46 @@ function getRoundWinner(playerChoice, computerChoice){
         (playerChoice=="scissors") && (computerChoice=="paper")
     ){
         //player wins
-        winnerText.textContent = "You won this round!";
+        winnerText.textContent =  "Round " + roundCount + ": You win!";
         return 1;
     }
     else{
         //computer wins
-        winnerText.textContent = "You lost this round!";
+        winnerText.textContent = "Round " + roundCount + ": You lose!";
         return 2;
     }
+}
+
+function resetGame(){
+    playerWinCount=0;
+    computerWinCount=0;
+    roundCount=0;
+    buttons.forEach( (button) => {button.disabled=true;});
+
+
+    playAgainText.textContent = "Click to play again.";
+    playAgainText.addEventListener("click", (e)=>{
+        playAgain=true;
+        winnerText.textContent="...";
+        finalScoreText.textContent="...";
+        playerWinCountText.textContent=playerWinCount;
+        computerWinCountText.textContent=computerWinCount;
+        playerWinCount.textContent=0;
+        computerWinCount.textContent=0;
+        finalResultsText.textContent="...";
+        buttons.forEach( (button) => {button.disabled=false;});
+       
+    })
+
+    // if (playAgain===true){
+    //     winnerText.textContent="...";
+    //     finalScoreText.textContent="...";
+    //     playerWinCountText.textContent=playerWinCount;
+    //     computerWinCountText.textContent=computerWinCount;
+    //     playerWinCount.textContent=0;
+    //     computerWinCount.textContent=0;
+    // }
+
 }
 
 //when rock/paper/scissors button is clicked, save player's choice,
@@ -114,16 +152,24 @@ function getRound(){
                         roundCount+=1;
                     }
                     
-                    if(roundCount === 5){
+                    if(roundCount === 6){
                         if (playerWinCount > computerWinCount){
-                            finalScoreText.textContent = "You won the game!";
+                            finalScoreText.textContent = "You won the game :)"; 
                         }
                         if (playerWinCount === computerWinCount){
-                            finalScoreText.textContent = "The is a tie!";
+                            finalScoreText.textContent = "Tie game!";
                         }
                         if (playerWinCount < computerWinCount){
-                            finalScoreText.textContent = "You lost the game.";
+                            finalScoreText.textContent = "You lost the game :(";
                         }
+
+                        finalResultsText.textContent = "Final Score: " + playerWinCount + " to "+ computerWinCount;
+                        
+
+                        resetGame();
+
+
+
                     }
                 }
             )

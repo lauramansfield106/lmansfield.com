@@ -149,7 +149,7 @@ a, a:hover, a:focus, a:active {
     margin-bottom: 0.25in;
 }
 
-.playAgain{
+#playAgain{
     display:flex;
     justify-content: center;
     text-align: center;

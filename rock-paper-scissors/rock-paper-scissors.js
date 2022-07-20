@@ -32,7 +32,8 @@ const finalScoreText = document.querySelector(".final");
 const finalResultsText = document.querySelector(".finalResults");
 
 //play again button
-const playAgainText = document.querySelector("button.playAgain");
+const playAgainText = document.getElementById("playAgain");
+playAgainText.style.visibility= "hidden";
 
 //@param string playerChoice
 //sets text of playerChoiceTest accordingly
@@ -97,7 +98,7 @@ function resetGame(){
     roundCount=0;
     buttons.forEach( (button) => {button.disabled=true;});
 
-
+    playAgainText.style.visibility= "visible";
     playAgainText.textContent = "Click to play again.";
     playAgainText.addEventListener("click", (e)=>{
         playAgain=true;
@@ -109,6 +110,7 @@ function resetGame(){
         computerWinCount.textContent=0;
         finalResultsText.textContent="...";
         buttons.forEach( (button) => {button.disabled=false;});
+        playAgainText.style.visibility= "hidden";
        
     })
 

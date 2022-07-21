@@ -38,6 +38,11 @@ a, a:hover, a:focus, a:active {
     justify-content: center;
     align-self: center;
 }
+.github{
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 2px;
+}
 
 .aboutText {
     display: flex; 

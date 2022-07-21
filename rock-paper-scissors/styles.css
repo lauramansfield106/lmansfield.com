@@ -34,6 +34,12 @@ a, a:hover, a:focus, a:active {
     justify-content: center;
     align-self: center;
 }
+.github{
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 2px;
+}
+
 
 .main-container {
     border: 4px solid #ff60be;

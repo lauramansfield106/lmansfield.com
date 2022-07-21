@@ -61,6 +61,4 @@ a, a:hover, a:focus, a:active {
 .carousel > div > img {
     border-radius: 5px;
     height: 500px;
-   
-    /*width: fit-content; */
 }

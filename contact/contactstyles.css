@@ -3,8 +3,7 @@
     font-size: large;
     white-space: nowrap;
     margin: auto;
-   
-    
+    background-color: rgb(226, 221, 213);    
 }
 
 a, a:hover, a:focus, a:active {
@@ -14,13 +13,6 @@ a, a:hover, a:focus, a:active {
 
 .header {
     display: flex;
-    /* justify-content: space-around; */
-    /* margin: auto; */
-    /* width: 100%; */
-    /* white-space: nowrap; */
-    /* background: #d2c0c7; */
-    /* padding-left: 6px    ;
-    padding-right: 6px; */
     padding: 10px;
 
 }

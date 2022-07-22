@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serifs;
     font-size: large;
     white-space: nowrap;
     margin: auto;
@@ -8,10 +8,13 @@
 }
 
 a, a:hover, a:focus, a:active {
-    text-decoration: none;
+    text-decoration:none;
     color: inherit;
 }
 
+a:hover{
+    text-decoration:underline;
+}
 .header {
     display: flex;
     /* justify-content: space-around; */
@@ -22,6 +25,7 @@ a, a:hover, a:focus, a:active {
     /* padding-left: 6px    ;
     padding-right: 6px; */
     padding: 10px;
+    
 
 }
 
@@ -40,6 +44,50 @@ a, a:hover, a:focus, a:active {
     align-self: center; 
 }
 
+.dropdown{
+    position: relative;
+}
+
+
+
+.dropdownbutton{
+    border:none;
+    margin-bottom: 10px; /*these two margins ensure space between btn and menu*/
+    margin-top: 10px;
+
+    
+}
+
+.dropdowncontent{
+    display:none;
+    position: absolute;
+    min-width:max-content;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdowncontent a{
+    display:block;
+    background: none;
+    margin: 15px;
+}
+
+.dropdowncontent a:hover {
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdowncontent{
+    display: block;
+   
+}
+
+.dropdown:hover .dropdownbutton {
+    background-color: gray;
+}
+
 
 .container {
     display: flex;
@@ -52,7 +100,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .container a:hover {
-    background-color: #c0d2cc;
+   color:green;
 }
 
 
@@ -75,66 +123,3 @@ a, a:hover, a:focus, a:active {
 }
 
 
-/* .quote {
-    font-family:'Times New Roman', Times, serif;
-    font-style: italic; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 10px;
-    background: #c0d2cc; 
-    height: 100px;
-    white-space: normal;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 3px 5px 5px lightgrey;
-} */
-
-.dropdown{
-    position: relative;
-    
-}
-
-
-
-.dropdownbutton{
-    /* background-color: rgb(226, 221, 213); */
-    border:none;
-    
-}
-
-.dropdowncontent{
-    display:none;
-    position: absolute;
-    min-width:max-content;
-    /* padding:5px; */
-    text-align: center;
-    background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    border:5px transparent;
-    z-index: 1;
-    /* margin-top: 5px; */
-    /* transform:translate3d(0,15px,0); */
-
-
-}
-
-.dropdowncontent a{
-    display:block;
-    background: none;
-    margin: 15px;
-}
-
-.dropdowncontent a:hover {
-    color:blue;
-}
-
-.dropdown:hover .dropdowncontent{
-    display: block;
-   
-}
-
-.dropdown:hover .dropdownbutton {
-    background-color: gray;
-}

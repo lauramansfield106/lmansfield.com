@@ -30,9 +30,17 @@
 
         
         <div class="header">
-            <div class="header-link-left"><a href="http://lmansfield.com"><img src="../favicon_io/favicon-32x32.png "></a></div>
+            <div class="header-link-left"><a href="http://lmansfield.com"><img src="../favicon_io/favicon-32x32.png" height="32"></a></div>
             <div class="header-link-right"><a href="../about/about.html">About</a></div>
-            <div class="header-link-right"><a href="">Work</a></div>
+            
+            <div class="header-link-right dropdown">
+                <button class="dropdownbutton">Work</button>
+                <div class="dropdowncontent">
+                    <a href="../rock-paper-scissors/rock-paper-scissors.html">Rock Paper Scissors</a>
+                    <a href="../rock-paper-scissors/rock-paper-scissors.html">Link 2</a>
+                </div>
+            </div>
+
             <div class="header-link-right"><a href="../contact/contact.html">Contact</a> </div>
             <div class="header-link-right"><a href="https://github.com/lauramansfield106" target="_blank" rel="noopener noreferrer">
                 <img src="../GitHub-Mark/PNG/GitHub-Mark-32px.png"> </a></div>
@@ -43,17 +51,38 @@
 
 
         <div class="carousel">
-            <div id="pic1">
-                <img src="./plants/calathea.jpg" alt="1">
-            </div>
-           
-            <div id="pic2">
-                <img src="./plants/bigboi.jpg" alt="2">
-            </div>
+
+            <a href="#pic1"></a>
+            <a href="#pic2"></a>
+            <a href="#pic3"></a>
+            <a href="#pic4"></a>
+
+          
+            <div class="pics">
+                <div id="pic1">
+                    <img src="./plants/calathea.jpg"  alt="1">
+                </div>
             
-            <div id="pic3">
-                <img src="./plants/spikyboy.jpg"  alt="3">
+                <div id="pic2">
+                    <img src="./plants/bigboi.jpg" alt="2">
+                </div>
+                
+                <div id="pic3">
+                    <img src="./plants/spikyboy.jpg" alt="3">
+                </div>
+
+                <div id="pic4">
+                    <img src="./plants/spikyboy.jpg"  alt="3">
+                </div>
             </div>
         </div>
 
+
+        <!-- <div class="dots">
+            <span class="dot" onclick=""></span>
+            <span class="dot" onclick=""></span>
+            <span class="dot" onclick=""></span>
+        </div> -->
+
+        <script src="plantCarousel.js" async defer></script>
     </body>

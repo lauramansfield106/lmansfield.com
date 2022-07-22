@@ -7,6 +7,7 @@
     
 }
 
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
@@ -19,29 +20,25 @@ a, a:hover, a:focus, a:active {
     /* width: 100%; */
     /* white-space: nowrap; */
     /* background: #d2c0c7; */
-    /* padding-left: 6px;
+    /* padding-left: 6px    ;
     padding-right: 6px; */
     padding: 10px;
+
 }
 
-.header-text{
+.header-link-left{
+ 
     width: 50px;
-    flex-grow: 20;
     font-weight: bolder;
     font-size: larger;
-
+    flex-grow: 20;
 }
 
-.header-link{
+.header-link-right{
+    justify-items: center;
     text-align: right;
     flex-grow: 1;
-    justify-content: center;
-    align-self: center;
-}
-.github{
-    text-align: center;
-    flex-grow: 1;
-    margin-top: 2px;
+    align-self: center; 
 }
 
 

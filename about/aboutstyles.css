@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serifs;
     font-size: large;
     white-space: nowrap;
     margin: auto;
@@ -7,19 +7,34 @@
     
 }
 
-
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
+a, a:hover, a:focus, a:active {
+    text-decoration:none;
+    color: inherit;
+}
 
+a:hover{
+    text-decoration:underline;
+}
 .header {
     display: flex;
+    /* justify-content: space-around; */
+    /* margin: auto; */
+    /* width: 100%; */
+    /* white-space: nowrap; */
+    /* background: #d2c0c7; */
+    /* padding-left: 6px    ;
+    padding-right: 6px; */
     padding: 10px;
+    
 
 }
 
 .header-link-left{
+ 
     width: 50px;
     font-weight: bolder;
     font-size: larger;
@@ -33,17 +48,66 @@ a, a:hover, a:focus, a:active {
     align-self: center; 
 }
 
+.dropdown{
+    position: relative;
+}
+
+
+
+.dropdownbutton{
+    border:none;
+    margin-bottom: 10px; /*these two margins ensure space between btn and menu*/
+    margin-top: 10px;
+
+    
+}
+
+.dropdowncontent{
+    display:none;
+    position: absolute;
+    min-width:max-content;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdowncontent a{
+    display:block;
+    background: none;
+    margin: 15px;
+}
+
+.dropdowncontent a:hover {
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdowncontent{
+    display: block;
+   
+}
+
+.dropdown:hover .dropdownbutton {
+    background-color: gray;
+}
+
 .aboutinfo {
     display:flex;
     padding-top: 1in;
     
 }
 .aboutText {
-    /* display: flex;  */
+    display: block;
     justify-content: center;
     padding:1in;
     white-space: normal;
 }
+
+/* .aboutText span{
+    display: inline;
+    position: absolute;
+} */
 
 .portrait{
     padding-right: 1in;
@@ -53,5 +117,34 @@ a, a:hover, a:focus, a:active {
 .portrait img{
     border-radius: .25in;
     box-shadow: 10px 10px 30px rgb(94, 89, 89);
+}
+
+
+
+.hover_img{
+    display: inline;
+    /* text-decoration: underline; */
+    /* margin:0; */
+}
+.hover_img a { 
+    position:relative; 
+    height: 200px;
+    width: 200px;
+}
+.hover_img a span { 
+    position:absolute;
+    display:none; 
+}
+
+.hover_img a span img{
+    height: 200px;
+    border-radius: .25in;
+}
+
+
+.hover_img a:hover span { 
+    display: inline-block; 
+    /* height: 200px;
+    width: 200px; */
 }
 

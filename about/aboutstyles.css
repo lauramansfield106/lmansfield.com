@@ -134,6 +134,7 @@ a:hover{
 .hover_img a span { 
     position:absolute;
     display:none; 
+    border-radius: .25in;
 }
 
 .hover_img a span img{

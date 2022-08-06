@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<html>
+   
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,27 +19,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">        
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+                $('#header').load('header.html')
+            })
+        </script>
+
+
     </head>
     <body>
-
-        
-        <div class="header">
-            <div class="header-link-left"><a href="http://lmansfield.com"><img src="./favicon_io/favicon-32x32.png" height="32"></a></div>
-            <div class="header-link-right"><a href="./about/about.html">About</a></div>
-            
-            <div class="header-link-right dropdown">
-                <button class="dropdownbutton">Work</button>
-                <div class="dropdowncontent">
-                    <a href="rock-paper-scissors/rock-paper-scissors.html">Rock Paper Scissors</a>
-                    <a href="rock-paper-scissors/rock-paper-scissors.html">Link 2</a>
-                </div>
-            </div>
-
-            <div class="header-link-right"><a href="./contact/contact.html">Contact</a> </div>
-            <div class="header-link-right"><a href="https://github.com/lauramansfield106" target="_blank" rel="noopener noreferrer">
-                <img src="./GitHub-Mark/PNG/GitHub-Mark-32px.png"> </a></div>
-        </div>
-
+        <div id="header" ></div>
+ 
         <div class="container">
             <div class="text"> <span style="font-size: 20pt;">Hello there! I'm Laura. </span>
             <br>
@@ -55,10 +49,16 @@
 
 
      
-        
-
-
-
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+            $('#header').load('./header/header.html')
+            })
+        </script>
 
        
     </body>

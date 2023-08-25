@@ -57,7 +57,7 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
+  --bs-body-font-size: 1.2rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
@@ -11316,4 +11316,21 @@ header {
 section {
   padding-top: 9rem;
   padding-bottom: 9rem;
+}
+
+/* Added by LMansfield */
+ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+ul>li {
+  position: relative;
+}
+span {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
 }

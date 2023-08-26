@@ -1,4 +1,6 @@
 @charset "UTF-8";
+
+
 /*!
 * Start Bootstrap - Scrolling Nav v5.0.5 (https://startbootstrap.com/template/scrolling-nav)
 * Copyright 2013-2022 Start Bootstrap
@@ -10,6 +12,8 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11318,7 +11322,7 @@ section {
   padding-bottom: 9rem;
 }
 
-/* Added by LMansfield */
+
 ul {
   list-style-type: none;
   margin-left: 2.5em;
